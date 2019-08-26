@@ -28,18 +28,18 @@ include 'includes/wallet.php';
   <!-- CORE CSS-->
   <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
   <link href="css/style.min.css" type="text/css" rel="stylesheet" media="screen,projection">
-  <!-- Custome CSS-->    
+  <!-- Custome CSS-->
   <link href="css/custom/custom.min.css" type="text/css" rel="stylesheet" media="screen,projection">
 
   <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
   <link href="js/plugins/perfect-scrollbar/perfect-scrollbar.css" type="text/css" rel="stylesheet" media="screen,projection">
-  
+
 </head>
 
 <body>
   <!-- Start Page Loading -->
   <div id="loader-wrapper">
-      <div id="loader"></div>        
+      <div id="loader"></div>
       <div class="loader-section section-left"></div>
       <div class="loader-section section-right"></div>
   </div>
@@ -53,13 +53,13 @@ include 'includes/wallet.php';
         <div class="navbar-fixed">
             <nav class="navbar-color">
                 <div class="nav-wrapper">
-                    <ul class="left">                      
+                    <ul class="left">
                       <li><h1 class="logo-wrapper"><a href="index.php" class="brand-logo darken-1"><img src="images/materialize-logo.png" alt="logo"></a> <span class="logo-text">Logo</span></h1></li>
                     </ul>
-                    <ul class="right hide-on-med-and-down">                        
+                    <ul class="right hide-on-med-and-down">
                         <li><a href="#"  class="waves-effect waves-block waves-light"><i class="mdi-editor-attach-money"><?php echo $balance;?></i></a>
                         </li>
-                    </ul>						
+                    </ul>
                 </div>
             </nav>
         </div>
@@ -122,9 +122,9 @@ include 'includes/wallet.php';
                         </li>
                     </ul>
                 </li>
-	
+
             <li class="bold"><a href="details.php" class="waves-effect waves-cyan"><i class="mdi-social-person"></i> Edit Details</a>
-            </li>				
+            </li>
         </ul>
         <a href="#" data-activates="slide-out" class="sidebar-collapse btn-floating btn-medium waves-effect waves-light hide-on-large-only cyan"><i class="mdi-navigation-menu"></i></a>
         </aside>
@@ -154,7 +154,7 @@ include 'includes/wallet.php';
           <div class="divider"></div>
           <!--editableTable-->
 <div id="work-collections" class="seaction">
-             
+
 					<?php
 					if(isset($_GET['status'])){
 						$status = $_GET['status'];
@@ -175,9 +175,9 @@ include 'includes/wallet.php';
                               <span class="collection-header">Order No. '.$row['id'].'</span>
                               <p><strong>Date:</strong> '.$row['date'].'</p>
                               <p><strong>Payment Type:</strong> '.$row['payment_type'].'</p>
-							  <p><strong>Address: </strong>'.$row['address'].'</p>							  
-                              <p><strong>Status:</strong> '.($status=='Paused' ? 'Paused <a  data-position="bottom" data-delay="50" data-tooltip="Please contact administrator for further details." class="btn-floating waves-effect waves-light tooltipped cyan">    ?</a>' : $status).'</p>							  
-							  '.(!empty($row['description']) ? '<p><strong>Note: </strong>'.$row['description'].'</p>' : '').'						                               
+							  <p><strong>Address: </strong>'.$row['address'].'</p>
+                              <p><strong>Status:</strong> '.($status=='Paused' ? 'Paused <a  data-position="bottom" data-delay="50" data-tooltip="Please contact administrator for further details." class="btn-floating waves-effect waves-light tooltipped cyan">    ?</a>' : $status).'</p>
+							  '.(!empty($row['description']) ? '<p><strong>Note: </strong>'.$row['description'].'</p>' : '').'
 							  <a href="#" class="secondary-content"><i class="mdi-action-grade"></i></a>
                               </li>';
 						$order_id = $row['id'];
@@ -219,10 +219,10 @@ include 'includes/wallet.php';
 									if($status != 'Delivered'){
 								echo '<form action="routers/cancel-order.php" method="post">
 										<input type="hidden" value="'.$id.'" name="id">
-										<input type="hidden" value="Cancelled by Customer" name="status">	
-										<input type="hidden" value="'.$row['payment_type'].'" name="payment_type">											
+										<input type="hidden" value="Cancelled by Customer" name="status">
+										<input type="hidden" value="'.$row['payment_type'].'" name="payment_type">
 										<button class="btn waves-effect waves-light right submit" type="submit" name="action">Cancel Order
-                                              <i class="mdi-content-clear right"></i> 
+                                              <i class="mdi-content-clear right"></i>
 										</button>
 										</form>';
 								}
@@ -266,15 +266,15 @@ include 'includes/wallet.php';
     <!-- ================================================
     Scripts
     ================================================ -->
-    
+
     <!-- jQuery Library -->
-    <script type="text/javascript" src="js/plugins/jquery-1.11.2.min.js"></script>    
+    <script type="text/javascript" src="js/plugins/jquery-1.11.2.min.js"></script>
     <!--angularjs-->
     <script type="text/javascript" src="js/plugins/angular.min.js"></script>
     <!--materialize js-->
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <!--scrollbar-->
-    <script type="text/javascript" src="js/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>       
+    <script type="text/javascript" src="js/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <!--plugins.js - Some Specific JS codes for Plugin Settings-->
     <script type="text/javascript" src="js/plugins.min.js"></script>
     <!--custom-script.js - Add your own theme custom JS-->
@@ -288,7 +288,7 @@ include 'includes/wallet.php';
 	{
 		if($_SESSION['admin_sid']==session_id())
 		{
-			header("location:all-orders.php");		
+			header("location:all-orders.php");
 		}
 		else{
 			header("location:login.php");
