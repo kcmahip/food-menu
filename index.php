@@ -29,12 +29,12 @@ include 'includes/wallet.php';
   <!-- CORE CSS-->
   <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
   <link href="css/style.min.css" type="text/css" rel="stylesheet" media="screen,projection">
-  <!-- Custome CSS-->    
+  <!-- Custome CSS-->
   <link href="css/custom/custom.min.css" type="text/css" rel="stylesheet" media="screen,projection">
   <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
   <link href="js/plugins/perfect-scrollbar/perfect-scrollbar.css" type="text/css" rel="stylesheet" media="screen,projection">
   <link href="js/plugins/data-tables/css/jquery.dataTables.min.css" type="text/css" rel="stylesheet" media="screen,projection">
-  
+
    <style type="text/css">
 
 
@@ -59,29 +59,29 @@ include 'includes/wallet.php';
   .input-field label.active{
       width:100%;
   }
-  .left-alert input[type=text] + label:after, 
-  .left-alert input[type=password] + label:after, 
-  .left-alert input[type=email] + label:after, 
-  .left-alert input[type=url] + label:after, 
+  .left-alert input[type=text] + label:after,
+  .left-alert input[type=password] + label:after,
+  .left-alert input[type=email] + label:after,
+  .left-alert input[type=url] + label:after,
   .left-alert input[type=time] + label:after,
-  .left-alert input[type=date] + label:after, 
-  .left-alert input[type=datetime-local] + label:after, 
-  .left-alert input[type=tel] + label:after, 
-  .left-alert input[type=number] + label:after, 
-  .left-alert input[type=search] + label:after, 
+  .left-alert input[type=date] + label:after,
+  .left-alert input[type=datetime-local] + label:after,
+  .left-alert input[type=tel] + label:after,
+  .left-alert input[type=number] + label:after,
+  .left-alert input[type=search] + label:after,
   .left-alert textarea.materialize-textarea + label:after{
       left:0px;
   }
-  .right-alert input[type=text] + label:after, 
-  .right-alert input[type=password] + label:after, 
-  .right-alert input[type=email] + label:after, 
-  .right-alert input[type=url] + label:after, 
+  .right-alert input[type=text] + label:after,
+  .right-alert input[type=password] + label:after,
+  .right-alert input[type=email] + label:after,
+  .right-alert input[type=url] + label:after,
   .right-alert input[type=time] + label:after,
-  .right-alert input[type=date] + label:after, 
-  .right-alert input[type=datetime-local] + label:after, 
-  .right-alert input[type=tel] + label:after, 
-  .right-alert input[type=number] + label:after, 
-  .right-alert input[type=search] + label:after, 
+  .right-alert input[type=date] + label:after,
+  .right-alert input[type=datetime-local] + label:after,
+  .right-alert input[type=tel] + label:after,
+  .right-alert input[type=number] + label:after,
+  .right-alert input[type=search] + label:after,
   .right-alert textarea.materialize-textarea + label:after{
       right:70px;
   }
@@ -112,17 +112,17 @@ include 'includes/wallet.php';
         color: orangered;
     }
     a:active {
-        background: orangered;
+        background: orange;
         color: white;
     }
-  </style> 
+  </style>
 </head>
 
 <body>
 
   <!-- Start Page Loading -->
   <div id="loader-wrapper">
-      <div id="loader"></div>        
+      <div id="loader"></div>
       <div class="loader-section section-left"></div>
       <div class="loader-section section-right"></div>
   </div>
@@ -136,10 +136,10 @@ include 'includes/wallet.php';
         <div class="navbar-fixed">
             <nav class="navbar-color">
                 <div class="nav-wrapper">
-                    <ul class="left">                      
+                    <ul class="left">
                       <li><h1 class="logo-wrapper"><a href="index.php" class="brand-logo darken-1"><img src="images/materialize-logo.png" alt="logo"></a> <span class="logo-text">Logo</span></h1></li>
                     </ul>
-                 				
+
                 </div>
             </nav>
         </div>
@@ -195,9 +195,9 @@ include 'includes/wallet.php';
                         </li>
                     </ul>
                 </li>
-                				
+
             <li class="bold"><a href="details.php" class="waves-effect waves-cyan"><i class="mdi-social-person"></i> Edit Details</a>
-            </li>				
+            </li>
         </ul>
         <a href="#" data-activates="slide-out" class="sidebar-collapse btn-floating btn-medium waves-effect waves-light hide-on-large-only cyan"><i class="mdi-navigation-menu"></i></a>
         </aside>
@@ -213,7 +213,7 @@ include 'includes/wallet.php';
           <div class="container">
             <div class="row">
               <div class="col s12 m12 l12">
-                <h5 class="breadcrumbs-title">Order</h5>
+
               </div>
             </div>
           </div>
@@ -223,25 +223,25 @@ include 'includes/wallet.php';
 
         <!--start container-->
         <div class="container">
-          <p class="caption">Hello <?php echo $name;?>  !</p>
+        <b><strong>  <p class="caption">Hello <?php echo $name;?>  !</p></strong</b>
           <div class="divider"></div>
 		  <form class="formValidate" id="formValidate" method="post" action="place-order.php" novalidate="novalidate">
             <div class="row">
 
-              <div class="col s12 m4 l3">   
-                <h4 class="header">Order Food</h4>
+              <div class="col s12 m4 l3">
+                <h3 class="header">Order Items:</h3>
               </div>
                <div class="input-field col s12">
               <i class="mdi-editor-mode-edit prefix"></i>
               <textarea id="cust_name" name="cust_name" class="materialize-textarea"></textarea>
-              <label for="cust_name" class="">Customer Name</label>
+              <label for="cust_name" class="">Enter Customer Name</label>
         </div>
               <div > <!--for overflow-->
-                  <table id="data-table-customer" class="display" cellspacing="0">
+                  <table id="data-table-customer" class="display" cellspacing="0.5">
                     <thead>
                       <tr>
-                        <th>Name</th>
-                        <th>Item Price/Piece</th>
+                        <th>Item </th>
+                        <th>Price</th>
                         <th>Quantity</th
 
                       </tr>
@@ -253,18 +253,18 @@ include 'includes/wallet.php';
 				while($row = mysqli_fetch_array($result))
 				{
           echo '<div class="ex1">';
-					echo '<tr><td>'.$row["name"].'</td><td>'.$row["price"].'</td> ';  
-                     
+					echo '<tr><td>'.$row["name"].'</td><td>'.$row["price"].'</td> ';
+
 					echo '<td><div class="input-field col s12"><label for='.$row["id"].' class="">Quantity</label>';
-  
+
 					echo '<input id="'.$row["id"].'" name="'.$row['id'].'" type="text" data-error=".errorTxt'.$row["id"].'"><div class="errorTxt'.$row["id"].'"></div></td></tr>';
           echo '</div>';
-       
+
 				}
 				?>
                     </tbody>
 </table>
-              </div>
+</div>
 
 			  <div>
 			  <div class="input-field col s12">
@@ -275,7 +275,7 @@ include 'includes/wallet.php';
             </div>
 			</form>
             <div class="divider"></div>
-            
+
           </div>
         </div>
         <!--end container-->
@@ -307,9 +307,9 @@ include 'includes/wallet.php';
     <!-- ================================================
     Scripts
     ================================================ -->
-    
+
     <!-- jQuery Library -->
-    <script type="text/javascript" src="js/plugins/jquery-1.11.2.min.js"></script>    
+    <script type="text/javascript" src="js/plugins/jquery-1.11.2.min.js"></script>
     <!--angularjs-->
     <script type="text/javascript" src="js/plugins/angular.min.js"></script>
     <!--materialize js-->
@@ -319,10 +319,10 @@ include 'includes/wallet.php';
     <!-- data-tables -->
     <script type="text/javascript" src="js/plugins/data-tables/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="js/plugins/data-tables/data-tables-script.js"></script>
-	
+
     <script type="text/javascript" src="js/plugins/jquery-validation/jquery.validate.min.js"></script>
     <script type="text/javascript" src="js/plugins/jquery-validation/additional-methods.min.js"></script>
-    
+
     <!--plugins.js - Some Specific JS codes for Plugin Settings-->
     <script type="text/javascript" src="js/plugins.min.js"></script>
     <!--custom-script.js - Add your own theme custom JS-->
@@ -346,7 +346,7 @@ include 'includes/wallet.php';
 			<?php
 			$result = mysqli_query($con, "SELECT * FROM items where not deleted;");
 			while($row = mysqli_fetch_array($result))
-			{  
+			{
 				echo $row["id"].':{
 				min: "Minimum 0",
 				max: "Maximum 10"
@@ -375,7 +375,7 @@ include 'includes/wallet.php';
 	{
 		if($_SESSION['admin_sid']==session_id())
 		{
-			header("location:admin-page.php");		
+			header("location:admin-page.php");
 		}
 		else{
 			header("location:login.php");

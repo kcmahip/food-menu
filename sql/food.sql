@@ -38,11 +38,11 @@ CREATE TABLE `items` (
 --
 
 INSERT INTO `items` (`id`, `name`, `price`, `deleted`) VALUES
-(1, 'Item 1', 25, 1),
-(2, 'Item 2', 45, 0),
-(3, 'Item 3', 20, 0),
-(4, 'Item 4', 15, 1),
-(5, 'Item 5', 20, 0);
+(1, 'Momo', 90, 1),
+(2, 'Pizza', 45, 1),
+(3, 'Chicken Burger', 20, 1),
+(4, 'Thukpa', 15, 1),
+(5, 'Tea', 20, 1);
 
 -- --------------------------------------------------------
 
